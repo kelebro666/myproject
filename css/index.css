@@ -1,0 +1,22 @@
+body {
+    background-color: lemonchiffon
+}
+.news {
+    background-color: rgb(210, 245, 233)
+}
+.news img {
+    float: right;
+}
+.future img {
+    float: left;
+}
+.future img {
+    width: 259;
+    height: 194;
+}
+.future {
+    background-color: rgb(248, 239, 241)
+}
+footer {
+    display: inline;
+}
