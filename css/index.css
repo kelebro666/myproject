@@ -8,6 +8,7 @@
 body {
     max-width: 980px;
     margin: auto;
+    background-color: rgb(231, 243, 208)
 }
 
 h1 {
@@ -22,13 +23,18 @@ footer {
     padding: 0;
 }
 
+h2 {
+    font-style: italic;
+    text-align: center;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu {
+header nav .menu {
     display: flex;
     flex: 1;
     padding: 0;
@@ -51,12 +57,135 @@ header nav .menu a:hover {
 
 #logo {
     background-image: url(../img/logo.png);
-    min-height: 400px;
+    min-height: 450px;
+    min-width: 600;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
 }
 
+@media (max-width: 600px) {
+    .menu {
+        display: flex;
+        flex-direction: column
+    }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+div #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background: #eee;
+}
+
+.effect1 {
+  color: #222;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 5px 25px 5px 10px;
+
+  -webkit-transition: all 0.3s;
+
+  -o-transition: all 0.3s;
+
+  transition: all 0.3s;
+
+  -webkit-transform: scale(3);
+
+      -ms-transform: scale(3);
+
+          transform: scale(3); /*change scale(3) to scale(1)*/
+}
+
+.effect1 .bg {
+  background: #222;
+  width: 15px;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  z-index: -1;
+
+  -webkit-transition: all 0.3s;
+
+  -o-transition: all 0.3s;
+
+  transition: all 0.3s;
+}
+
+.effect1:hover {
+  padding-right: 10px;
+  color: #fff;
+}
+
+.effect1:hover .bg {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.effect1 .bg:before, .effect1 .bg:after {
+  content: '';
+  height: 2px;
+  width: 10px;
+  background: #222;
+  position: absolute;
+  right: -2px;      
+  -webkit-transition: all 0.3s;      
+  -o-transition: all 0.3s;      
+  transition: all 0.3s;
+}
+
+.effect1 .bg:before {
+  bottom: 3px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.effect1 .bg:after{
+  top: 3px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.effect1:hover .bg:before,
+.effect1:hover .bg:after{
+  right: 0;
+}
+
+.effect1:hover .bg:before{
+  bottom: 6px;
+}
+
+.effect1:hover .bg:after{
+  top: 6px;
+}
+
+main div .news img {
+    min-width: 480px;
+    max-width: 720px;
+    display: flex;
+    justify-content: center;
+}
