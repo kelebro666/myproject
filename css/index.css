@@ -1,46 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Merriweather|Patua+One&display=swap');
+
+:root {
+    --main-color: black;
+    font-family: 'Merriweather';
+}
+
 body {
-    background-color: lemonchiffon
+    max-width: 980px;
+    margin: auto;
 }
-html, body {
-    width: 100%;
-    height: 100%;
+
+h1 {
+    font-family: 'Patua One';
+    font-size: 3rem;
+    text-transform: uppercase;
 }
-.news {
-    background-color: rgb(210, 245, 233);
-}
-.news img {
-    float: right;
-    height: 300px;
-    width: 500px;
-    margin: 0 0 1cm 1cm;
-}
-.future img {
-    float: left;
-}
-.future {
-    background-color: rgb(248, 239, 241)
-}
+
+h1, h2, p, section, header, main,
 footer {
-    display: inline;
-    background-color: grey
+    margin: 0;
+    padding: 0;
 }
-.topnav {
-    width: 500px;
-    height: 20px;
-    background-color: gainsboro
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.topnav a {
-    color: black;
-    margin-left: 30px;
+
+.menu {
+    display: flex;
+    flex: 1;
+    padding: 0;
+    margin: 10px;
+    list-style-type: none;
+}
+
+header nav .menu a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main-color);
+    border: 1px solid transparent;
+    padding: 2px;
 
 }
-.topnav {
-    float: right
+
+header nav .menu a:hover {
+    border: 1px solid var(--main-color);
 }
-h2 {
-    text-align: center
+
+#logo {
+    background-image: url(../img/logo.png);
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.band a img {
-    width: 200px;
-    height: 200px;
-}
+
