@@ -13,9 +13,15 @@ body {
 
 h1 {
     font-family: 'Patua One';
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
+ @media (min-width: 800px) { 
+  h1 {
+    font-size: 3rem; 
+  }
+} 
+
 
 h1, h2, p, section, header, main,
 footer {
@@ -184,9 +190,21 @@ div #logo {
   top: 6px;
 }
 
-main div .news img {
-    min-width: 480px;
-    max-width: 720px;
+ .band img {
+     width: 450px;
+     height: 450px;
+     max-width: 100%;
+ }
+
+ @media (min-width: 600px) {
+    .band img {
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr;
+    width: 75px;
+    height: 75px;
+}
+ }
+ .news img {
+    max-width: 100%;
     display: flex;
-    justify-content: center;
 }
