@@ -16,12 +16,12 @@ h1 {
     font-size: 2rem;
     text-transform: uppercase;
 }
- @media (min-width: 800px) { 
-  h1 {
-    font-size: 3rem; 
-  }
-} 
-
+ 
+@media (min-width: 610px) {
+    h1 {
+    font-size: 1.5rem;
+    }
+}
 
 h1, h2, p, section, header, main,
 footer {
@@ -31,22 +31,30 @@ footer {
 
 h2 {
     font-style: italic;
+    font-size: 2rem;
     text-align: center;
+    margin: 4px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
 
 header nav .menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    padding: 0;
-    margin: 10px;
     list-style-type: none;
+}
+
+@media (min-width: 610px) {
+    header nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding: 0;
+        margin: 10px;
+        list-style-type: none;
+    }
 }
 
 header nav .menu a {
@@ -81,8 +89,7 @@ header nav .menu a:hover {
     }
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -91,25 +98,61 @@ body {
 }
 
  .band img {
-     max-width: 100%;
+    width: 100%;
+    display: block;
+    margin: 2px;
  }
 
- @media (min-width: 700px) {
-    .band img {
-    height: 120px;
+@media (min-width: 650px) {
+    .band {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 3px;
+    }
+}
+
+    .news img {
+    width: 100%;
+    display: block;
+}
+
+@media (min-width: 700px) {
+    .allnews {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 700px) {
+    .news {
+        margin: 2px;
+        
+    }
+}
+
+.allfuture img {
+    width: 100%;
+    display: block;
     margin: 2px;
-    margin-left: 2px;
-    margin-right: 2px;
 }
- }
- @media (min-width: 700px) {
-     .band {
-         display: flex;
-         justify-content: space-between;
-         max-width: 100%;
-     }
- }
- .news img {
-    max-width: 100%;
-    display: flex;
+
+@media (min-width:700px) {
+    .allfuture {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
 }
+
+.contacts {
+    text-align: center;
+
+
+/* @media (min-width: 700px) {
+    .contacts {
+        display: flex;
+    }
+} */
+
+/* .message input {
+    width: 100%
+} */
