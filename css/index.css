@@ -17,9 +17,17 @@ h1 {
     text-transform: uppercase;
 }
  
-@media (min-width: 610px) {
+@media (min-width: 650px) {
     h1 {
     font-size: 1.5rem;
+    font: bold;
+    }
+}
+
+@media (min-width: 850px) {
+    h1 {
+    font-size: 2.5rem;
+    font: bold;
     }
 }
 
@@ -46,7 +54,7 @@ header nav .menu {
     list-style-type: none;
 }
 
-@media (min-width: 610px) {
+@media (min-width: 650px) {
     header nav .menu {
         display: flex;
         flex-wrap: wrap;
@@ -70,18 +78,6 @@ header nav .menu a:hover {
     border: 1px solid var(--main-color);
 }
 
-.logo {
-    background-image: url(../img/logo.png);
-    min-height: 450px;
-    min-width: 700px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-
 @media (max-width: 600px) {
     .menu {
         display: flex;
@@ -95,16 +91,17 @@ html, body {
 
 .allnews {
     text-align: center;
+    margin: 4px;
 }
 
- .band img {
+ .team img {
     width: 100%;
     display: block;
-    margin: 2px;
+    margin: 4px;
  }
 
 @media (min-width: 650px) {
-    .band {
+    .team {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         column-gap: 3px;
@@ -145,14 +142,10 @@ html, body {
 
 .contacts {
     text-align: center;
+}
 
-
-/* @media (min-width: 700px) {
-    .contacts {
-        display: flex;
-    }
-} */
-
-/* .message input {
-    width: 100%
-} */
+footer {
+    background-color: gray;
+    font-size: 0.75rem;
+    margin: 4px 0 0 0;
+}
